@@ -16,13 +16,13 @@ services: mongodb
 env:
   matrix:
     - SUBPROJECT=catapult-sdk
-    - SUBPROJECT=monitor
-    - SUBPROJECT=rest
-    - SUBPROJECT=spammer
+    # - SUBPROJECT=monitor
+    # - SUBPROJECT=rest
+    # - SUBPROJECT=spammer
 
 cache: yarn
 
 before_script:
   - sh yarn_setup.sh
 
-script: cd ${SUBPROJECT} && yarn test
+script: cd ${SUBPROJECT} && yarn run test:travis
