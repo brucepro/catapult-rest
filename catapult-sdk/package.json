@@ -39,5 +39,11 @@
     "js-sha3": "^0.7.0",
     "ripemd160": "^2.0.1",
     "tweetnacl": "^1.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "src/external/*.js",
+      "test/**/*"
+    ]
   }
 }
